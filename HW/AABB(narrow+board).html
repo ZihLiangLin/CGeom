@@ -29,15 +29,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/107/three.min.js"></script>
 <script>
-/*說明:
-	因為讀取順序為(ij)01 02 03 04 12 13 14 23 24 34
-  以i=0說明
-  當01有發生collide 01變red 但02沒有發生collide 0會變成white 導致碰撞時只會有1格變紅
-
-  解決方法:
-  當發生碰撞時，將碰到的aabb標記起來;將碰到的aabb標記起來，因為怕有些aabb沒有update到，所以將update拉出原本的迴圈，以forEach撰寫。
-  2019.10.08 04:24 a.m.
-*/
 javascript: (function() {
   var script = document.createElement('script');
   script.onload = function() {
